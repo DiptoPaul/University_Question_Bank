@@ -8,7 +8,7 @@
         <script>
             $(document).ready(function() {
                 $('select').material_select();
-            });
+            })
         </script>
     </head>
     <body class = "cyan indigo-text">
@@ -127,7 +127,6 @@
                 </div>
             </form>
             <table>
-
 <?php
 if (isset($_POST['Search']))
 {
@@ -135,14 +134,11 @@ if (isset($_POST['Search']))
     $E = $_POST['easy'];
     $M = $_POST['medium'];
     $H = $_POST['hard'];
-    
     if (($E + $M + $H) != 100)
         die ("Sum is not equal to 100");
-    
     $E = round(($N * $E) / 100);
     $M = round(($N * $M) / 100);
     $H = round(($N * $H) / 100);
-    
     $link = mysqli_connect("localhost", "root", "", "question");
     if (!$link) die ("Sorry could not connect to database");
     $eq = mysqli_query($link , "select * from typed where Difficulty = 'Easy' order by rand() limit $E");

@@ -8,7 +8,7 @@
         <script>
             $(document).ready(function() {
                 $('select').material_select();
-            });
+            })
         </script>
     </head>
     <body class = "cyan indigo-text">
